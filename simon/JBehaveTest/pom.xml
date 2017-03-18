@@ -39,8 +39,14 @@
                             <includes>
                                 <include>**/*Scenario.java</include>
                             </includes>
-                            <ignoreFailureInStories>true</ignoreFailureInStories>
+                            <ignoreFailureInStories>false</ignoreFailureInStories>
                             <ignoreFailureInView>false</ignoreFailureInView>
+                            <systemProperties>
+                                <property>
+                                    <name>java.awt.headless</name>
+                                    <value>true</value>
+                                </property>
+                            </systemProperties>
                         </configuration>
                         <goals>
                             <goal>run-stories-as-embeddables</goal>
