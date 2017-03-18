@@ -3,7 +3,7 @@ Given an account with 10 euros
 And another with 0 euros
 When I transfer 5 euros
 Then the first account should have 5 euros
-And the second one 5 euros
+And the second one 15 euros
 
 
 Scenario: Move money without enough money

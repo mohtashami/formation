@@ -6,7 +6,6 @@ import org.jbehave.core.reporters.Format;
 import org.jbehave.core.reporters.StoryReporterBuilder;
 import org.jbehave.core.steps.CandidateSteps;
 import org.jbehave.core.steps.InstanceStepsFactory;
-import org.junit.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -16,13 +15,16 @@ public class AccountScenario extends JUnitStory {
     @Override
     public Configuration configuration() {
         URL storyURL = null;
+
         try {
             // This requires you to start Maven from the project directory
             storyURL = new URL("file://" + System.getProperty("user.dir")
                     + "/src/main/stories/");
-        } catch (MalformedURLException e) {
+        }
+        catch (MalformedURLException e) {
             e.printStackTrace();
         }
+
         return new MostUsefulConfiguration().useStoryLoader(
                 new LoadFromRelativeFile(storyURL)).useStoryReporterBuilder(
                 new StoryReporterBuilder().withFormats(Format.HTML));
@@ -31,16 +33,5 @@ public class AccountScenario extends JUnitStory {
     public List<CandidateSteps> candidateSteps() {
         return new InstanceStepsFactory(configuration(), new AccountStory())
                 .createCandidateSteps();
-    }
-
-    @Override
-    @Test
-    public void run() {
-        try {
-            super.run();
-        }
-        catch (Throwable e) {
-            e.printStackTrace();
-        }
     }
 }
