@@ -16,8 +16,6 @@ public class AccountScenario extends JUnitStory {
         URL storyURL = null;
 
         try {
-            // This requires you to start Maven from the project directory
-//            storyURL = new URL("file://" + System.getProperty("user.dir") + "/src/main/stories/");
             storyURL = getClass().getClassLoader().getResource("");
         }
         catch (Exception e) {
