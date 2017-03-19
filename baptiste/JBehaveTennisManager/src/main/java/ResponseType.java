@@ -1,0 +1,23 @@
+public enum ResponseType {
+    SUCCESS("SUCCESS"),
+    PLAYER_NOT_FOUND("PLAYER_NOT_FOUND"),
+    FIRST_NAME_REQUIRED("FIRST_NAME_REQUIRED"),
+    FIRST_NAME_MAL_FORMATTED("FIRST_NAME_MAL_FORMATTED"),
+    LAST_NAME_REQUIRED("LAST_NAME_REQUIRED"),
+    LAST_NAME_MAL_FORMATTED("LAST_NAME_MAL_FORMATTED"),
+    GENDER_REQUIRED("GENDER_REQUIRED"),
+    GENDER_MAL_FORMATTED("GENDER_MAL_FORMATTED"),
+    EMAIL_REQUIRED("EMAIL_REQUIRED"),
+    EMAIL_MAL_FORMATTED("EMAIL_MAL_FORMATTED"),
+    UNKNOWN("UNKNOWN");
+
+    private String value;
+
+    ResponseType(String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
+    }
+}
