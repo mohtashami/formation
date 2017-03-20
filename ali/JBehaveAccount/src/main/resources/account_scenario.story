@@ -1,4 +1,4 @@
-Scenario: Move money when I have enough money
+Scenario: Move money when I have enough money2
 Given an account with 10 euros
 And another with 0 euros
 When I transfer 5 euros
